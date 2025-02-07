@@ -14,7 +14,7 @@ router.get("/rutaGet1", function (req, res) {
   res.send("Hola desde rutaGet1");
 });
 router.get("/rutaGet2", function (req, res) {
-  console.log("Alguien accede a ruta1");
+  console.log("Alguien accede a ruta2");
   res.send("Hola desde rutaGet2");
 });
 
@@ -23,6 +23,31 @@ router.get("/rutaGetJSON", function (req, res) {
   res.json({
     saludo: "Hola desde un JSON",
   });
+});
+
+router.post("/rutaPOST", function (req, res) {
+  console.log("Alguien accede a rutaPost");
+  res.send("Hola desde rutaPost")
+});
+
+router.post("/rutaPOST2", function (req, res) {
+  console.log("Alguien accede a rutaPost2");
+  res.send("Hola desde rutaPost2")
+});
+
+router.post("/rutaPOST3", function (req, res) {
+  console.log("Alguien accede a rutaPost3");
+  res.send("Hola desde rutaPost3")
+});
+
+router.post("/rutaPOST4", function (req, res) {
+  console.log("Alguien accede a rutaPost4");
+  res.send("Hola desde rutaPost4")
+});
+
+router.post("/rutaPOST5", function (req, res) {
+  console.log("Alguien accede a rutaPost5");
+  res.send("Hola desde rutaPost5")
 });
 
 module.exports = router;
