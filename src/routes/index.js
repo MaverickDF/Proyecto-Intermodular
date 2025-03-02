@@ -28,6 +28,7 @@ router.get("/rutaGetJSON", function (req, res) {
 router.post("/rutaPOST", function (req, res) {
   console.log("Alguien accede a rutaPost");
   res.send("Hola desde rutaPost")
+  console.log(req.body);
 });
 
 router.post("/rutaPOST2", function (req, res) {

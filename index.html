@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-widtch, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <p>Formulario para envio a ruta GET</p>
+        <form action="http://localhost:8080/rutaGet" method="GET">
+            Nombre: <input type="text" name="nombre" /><br />
+            Apellido: <input type="text" name="apellido" /><br />
+            Correo: <input type="text" name="correo" /><br />
+            Edad: <input type="number" name="edad" /><br />
+            Telefono: <input type="tel" name="telefono" /><br />
+            
+            <button type="submit">Send to backend</button>
+        </form>
+        <br />
+        <p>Formulario para envio a ruta POST</p>
+        <form action="http://localhost:8080/rutaPOST" method="POST">
+            First name: <input type="text" name="nombre" /><br />
+            Last name: <input type="text" name="apellido" /><br />
+            Correo: <input type="text" name="correo" /><br />
+            Edad: <input type="number" name="edad" /><br />
+            Telefono: <input type="tel" name="telefono" /><br />
+            <button type="submit">Send to backend</button>
+        </form>
+    </body>
+</html>
