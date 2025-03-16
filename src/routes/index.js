@@ -28,17 +28,17 @@ router.get("/rutaGetJSON", function (req, res) {
 router.post("/rutaPOST", function (req, res) {
   console.log("Alguien accede a rutaPost");
   // res.send("Hola desde rutaPost")
-  console.log(req.body);
-  res.json({
-    id: "001",
-    nombre: req.body.nombre,
-    apellido: req.body.apellido,
-    correo: req.body.correo,
-    edad: req.body.edad,
-    correo: req.body.correo,
+  res.send("Hola desde PI007")
+  // res.json({
+  //   id: "001",
+  //   nombre: req.body.nombre,
+  //   apellido: req.body.apellido,
+  //   correo: req.body.correo,
+  //   edad: req.body.edad,
+  //   correo: req.body.correo,
   })
   // res.redirect("http://127.0.0.1:5500/index.html");
-});
+
 
 router.post("/rutaPOST2", function (req, res) {
   console.log("Alguien accede a rutaPost2");
