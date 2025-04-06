@@ -28,7 +28,7 @@ router.get("/rutaGetJSON", function (req, res) {
 router.post("/rutaPOST", function (req, res) {
   console.log("Alguien accede a rutaPost");
   // res.send("Hola desde rutaPost")
-  res.send("Hola desde PI007")
+  res.send("Hola desde RutaPost")
   // res.json({
   //   id: "001",
   //   nombre: req.body.nombre,
