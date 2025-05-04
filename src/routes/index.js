@@ -1,5 +1,6 @@
 const { Router } = require("express");
 const router = Router();
+const OpenAI = require("openai");
 
 router.get("/", function (req, res) {
   console.log("Alguien accede al servidor");
@@ -58,6 +59,28 @@ router.post("/rutaPOST4", function (req, res) {
 router.post("/rutaPOST5", function (req, res) {
   console.log("Alguien accede a rutaPost5");
   res.send("Hola desde rutaPost5")
+});
+
+router.post("/rutaPOST_AI", (req, res) => {
+const openai = new OpenAI({
+  apiKey: req.body.OPENAI_API_KEY, });
+  const role = req.body.role || "developer";
+  const question = req.body.pregunta || "";
+
+  const completion = openai.chat.completions.create({
+    model: "gpt-4o-mini",
+    store: true,
+    messages: [
+      {
+        role: role,
+        content: "Eres un ordenador malote" + question,
+      },
+    ],
+  });
+
+  completion.then((result) => { 
+    res.send(result.choices[0].message);
+  });
 });
 
 module.exports = router;
